@@ -68,7 +68,6 @@ for dirname, dirs, files in os.walk(dir_path + '/raw_qPCR'):
 				df_hex = get_df_hex(h)
 
 				df_names=pd.read_csv('raw_qPCR/NAMING ' + fam_file[:-10] + '.csv', encoding = "utf-8", index_col=0)
-				#NAMING 18.08.14 AD drug test plate 19 H1zfn.csv
 				
 				df_calcs = pd.DataFrame()
 				df_calcs['names'] = df_names.Sample_name
@@ -132,13 +131,6 @@ for dirname, dirs, files in os.walk(dir_path + '/raw_qPCR'):
 				with open(final_result_file,'w') as csvfile:
 					finaldf_results3.to_csv(final_result_file, sep=',', index=True, encoding='utf-8', quoting=None)
 
-
-
-
-
-
-#import norm values
-#have to calculate ddCts
 
 
 
